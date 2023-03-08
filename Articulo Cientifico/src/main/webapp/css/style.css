@@ -93,53 +93,63 @@ ol li{
 }
 
 .main{
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    margin: 2rem 1rem;
     text-align: left;
 }
 
 .main h2{
     color: var(--rojo);
+    font-weight: bold;
+    margin-left: 4rem;
+    text-align: right;
 }
 
 .main p{
     margin-top: 2rem;
+    margin-right: 5rem;
+    text-align: justify;
 }
 
-.contenido_problema,
-.contenido_experimento{
+.contenido_problema--titulo,
+.contenido_experimento--titulo,
+.contenido_problema--parrafo,
+.contenido_experimento--parrafo{
     background-color: bisque;
 }
 
-.contenido_solucion{
+.contenido_solucion--titulo,
+.contenido_solucion--parrafo{
     background-color: #FFFFFF;
 }
 
-.contenido_solucion,
-.contenido_problema,
-.contenido_experimento{
-    display: flex;
-    flex-direction: row;
-    margin: 0 1rem;
-    padding: 1.5rem 0;
-}
+/*.contenido_solucion,*/
+/*.contenido_problema,*/
+/*.contenido_experimento{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    margin: 0 1rem;*/
+/*    padding: 1.5rem 0;*/
+/*}*/
 
-.contenido_solucion h2,
-.contenido_experimento h2,
-.contenido_problema h2{
-    margin-left: 12rem;
-}
+/*.contenido_solucion h2,*/
+/*.contenido_experimento h2,*/
+/*.contenido_problema h2{*/
+/*    margin-left: 12rem;*/
+/*}*/
 
-.contenido_solucion p,
-.contenido_experimento p,
-.contenido_problema p{
-    margin-right: 12rem;
-    text-align: justify;
-}
+/*.contenido_solucion p,*/
+/*.contenido_experimento p,*/
+/*.contenido_problema p{*/
+/*    margin-right: 12rem;*/
+/*    text-align: justify;*/
+/*}*/
 
 footer p{
     color: var(--rojo);
     text-align: center;
     padding-bottom: 5rem;
+    font-weight: bold;
 }
