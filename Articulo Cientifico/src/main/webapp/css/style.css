@@ -71,9 +71,15 @@ img {
 .estudiantes{
     display: flex;
     flex-direction: column;
-    color: var(--azul);
+    color: var(--negro);
     margin-top: 2rem;
+    margin-left: 2rem;
     text-align: left;
+}
+
+.estudiantes h2{
+    color: var(--rojo);
+    font-weight: bold;
 }
 
 ol li{
@@ -82,21 +88,23 @@ ol li{
 }
 
 .autores{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem 0;
+    margin: 0 8rem;
+    text-align: justify;
+}
+
+.autores .autor{
+    margin: 0 auto;
 }
 
 .autor{
-    width: 7%;
+    width: 20%;
 }
-
 .main{
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
-    margin: 2rem 1rem;
+    margin: 4rem 1rem;
     text-align: left;
 }
 
@@ -104,48 +112,97 @@ ol li{
     color: var(--rojo);
     font-weight: bold;
     margin-left: 4rem;
-    text-align: right;
 }
 
 .main p{
     margin-top: 2rem;
     margin-right: 5rem;
+    margin-bottom: 3rem;
     text-align: justify;
 }
 
-.contenido_problema--titulo,
-.contenido_experimento--titulo,
-.contenido_problema--parrafo,
-.contenido_experimento--parrafo{
-    background-color: bisque;
+*:focus {
+    outline: none;
 }
 
-.contenido_solucion--titulo,
-.contenido_solucion--parrafo{
-    background-color: #FFFFFF;
+body > div {
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
-/*.contenido_solucion,*/
-/*.contenido_problema,*/
-/*.contenido_experimento{*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    margin: 0 1rem;*/
-/*    padding: 1.5rem 0;*/
-/*}*/
+details div {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 1.5em;
+}
 
-/*.contenido_solucion h2,*/
-/*.contenido_experimento h2,*/
-/*.contenido_problema h2{*/
-/*    margin-left: 12rem;*/
-/*}*/
+details div > * + * {
+    margin-top: 1.5em;
+}
 
-/*.contenido_solucion p,*/
-/*.contenido_experimento p,*/
-/*.contenido_problema p{*/
-/*    margin-right: 12rem;*/
-/*    text-align: justify;*/
-/*}*/
+details + details {
+    margin-top: .5rem;
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    border: 2px solid #000;
+    padding: .75em 1em;
+    cursor: pointer;
+    position: relative;
+
+}
+
+summary:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: .75rem;
+    content: "↓";
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: #000;
+    color: #FFF;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+details[open] summary {
+    background-color: #eee;
+}
+
+details[open] summary:before {
+    content: "↑";
+}
+
+summary:hover {
+    background-color: #eee;
+}
+
+footer a{
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 1px 0 0;
+}
+
+a:hover {
+    box-shadow: 0 3px 0 0;
+}
 
 footer p{
     color: var(--rojo);
